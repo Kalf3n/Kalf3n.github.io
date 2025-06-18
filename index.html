@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Trovador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Montserrat & Playfair Display fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #181a20;
+      --secondary-bg: #23262f;
+      --accent: #f9c846;
+      --text: #f7f7f7;
+      --muted: #bfc3c9;
+      --radius: 22px;
+      --transition: 0.23s cubic-bezier(.4,0,.2,1);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-image: 
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212),
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212);
+      background-size: 60px 60px;
+      background-position: 0 0, 30px 30px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Дискретные кнопки в углах */
+    .corner-buttons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .corner-btn {
+      background: rgba(35, 38, 47, 0.9);
+      border: 1px solid rgba(249, 200, 70, 0.3);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+    }
+
+    .corner-btn:hover {
+      background: rgba(249, 200, 70, 0.15);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(249, 200, 70, 0.2);
+    }
+
+    .corner-btn::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      right: 55px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(35, 38, 47, 0.95);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid rgba(249, 200, 70, 0.2);
+    }
+
+    .corner-btn:hover::before {
+      opacity: 1;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 50px 10px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      justify-content: center;
+      flex: 1;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 0.4em;
+      margin-top: 18px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      text-align: center;
+      line-height: 1.05;
+    }
+    .lang-select-label {
+      color: var(--text);
+      font-size: 1.12rem;
+      margin-bottom: 1.6em;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .lang-btns {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+    .menu-card {
+      background: var(--secondary-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 18px 0 #0004;
+      padding: 22px 18px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border: 2.5px solid #282a34;
+      transition: box-shadow 0.23s, border-color 0.23s;
+      cursor: pointer;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1.1px;
+      text-align: center;
+      outline: none;
+      user-select: none;
+      text-decoration: none;
+    }
+    .menu-card:hover, .menu-card:focus {
+      box-shadow: 0 8px 28px 0 #f9c84644;
+      border-color: var(--accent);
+      background: #23262f;
+      color: var(--accent);
+      transform: translateY(-2px) scale(1.03);
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        max-width: 99vw;
+        padding: 18px 2vw 0 2vw;
+      }
+      .logo { font-size: 1.7rem; margin-top: 8px; }
+      .menu-card { padding: 13px 8px 10px 8px; font-size: 1rem; }
+      
+      .corner-buttons {
+        top: 15px;
+        right: 15px;
+      }
+      
+      .corner-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+      }
+      
+      .corner-btn::before {
+        right: 50px;
+        font-size: 0.7rem;
+      }
+    }
+    
+    .footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+      letter-spacing: 0.2px;
+      width: 100vw;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      background: transparent;
+      padding-bottom: 12px;
+      z-index: 10;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Дискретные кнопки в правом верхнем углу -->
+  <div class="corner-buttons">
+    <a class="corner-btn" href="contacto.html" data-tooltip="Contacto">📞</a>
+    <a class="corner-btn" href="developer.html" data-tooltip="Desarrollador">👨‍💻</a>
+  </div>
+
+  <div class="container">
+    <div class="logo">El Trovador</div>
+    <div class="lang-select-label">
+      Selecciona tu idioma<br>
+      <span style="color:var(--muted); font-size:0.98em;">Select your language</span>
+    </div>
+    <div class="lang-btns">
+      <a class="menu-card" href="Menu-EN.html">English</a>
+      <a class="menu-card" href="Menu-ES.html">Español</a>
+    </div>
+  </div>
+  <div class="footer">
+    © 2025 El Trovador
+  </div>
+</body>
+</html>

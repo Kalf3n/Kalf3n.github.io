@@ -1,0 +1,342 @@
+:root {
+    --primary-bg: #181a20;
+    --secondary-bg: #23262f;
+    --card-bg: #23232b;
+    --accent: #f9c846;
+    --text: #f7f7f7;
+    --text-secondary: #bfc4d1;
+    --muted: #bfc3c9;
+    --radius: 22px;
+    --transition: 0.23s cubic-bezier(.4,0,.2,1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text);
+    font-family: 'Montserrat', Arial, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212),
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.top-bar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--accent);
+    color: var(--primary-bg);
+    font-weight: 700;
+    font-size: 1.06rem;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px 10px 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px 0 #f9c84633;
+    outline: none;
+    transition: background var(--transition), color var(--transition), transform 0.18s;
+    text-decoration: none;
+    letter-spacing: 1.1px;
+    margin-bottom: 0;
+}
+
+.allergens-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: auto; /* Сбрасываем left */
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--accent);
+    color: var(--primary-bg);
+    font-weight: 700;
+    font-size: 1.06rem;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px 10px 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 12px 0 #f9c84633;
+    outline: none;
+    transition: background var(--transition), color var(--transition), transform 0.18s;
+    text-decoration: none;
+    letter-spacing: 1.1px;
+    margin-bottom: 0;
+}
+
+.allergens-btn {
+    padding: 10px 20px;
+    font-size: 1.01rem;
+    margin-left: auto;
+}
+
+
+.back-btn:hover, .back-btn:focus,
+.allergens-btn:hover, .allergens-btn:focus {
+    background: #fff;
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.back-btn svg {
+    width: 1.2em;
+    height: 1.2em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    margin-right: 4px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 0.1em;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+.section-title {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.menu-card {
+    background: var(--secondary-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 18px 0 #0004;
+    padding: 22px 18px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2.5px solid #282a34;
+    transition: box-shadow 0.23s, border-color 0.23s;
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 28px 0 #f9c84644;
+    border-color: var(--accent);
+}
+
+.item-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.item-name {
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    font-size: 1.13em;
+    margin-bottom: 2px;
+}
+
+.item-price {
+    min-width: 70px;
+    text-align: right;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.13em;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.item-desc {
+    color: var(--muted);
+    font-size: 0.97em;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.item-icons-block {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+    flex-wrap: wrap;
+}
+
+.item-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.allergen-icons {
+    display: flex;
+    gap: 9px;
+}
+
+.allergen-icons img {
+    width: 28px;
+    height: 28px;
+    background: var(--primary-bg);
+    border-radius: 50%;
+    padding: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+}
+
+/* Стили для кнопки "ver foto" */
+.view-image-btn {
+    background: none;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    border-radius: 14px;
+    padding: 3px 13px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s;
+}
+
+.view-image-btn:hover {
+    background: var(--accent);
+    color: var(--card-bg);
+}
+
+.alergen-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #23262f;
+    border-radius: 14px;
+    padding: 5px 13px 5px 7px;
+    box-shadow: 0 2px 10px 0 #0002;
+    border: 2.5px solid transparent;
+    transition: box-shadow 0.22s, border-color 0.22s, transform 0.22s, background 0.22s;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.alergen-block:hover {
+    box-shadow: 0 6px 20px 0 #f9c84666;
+    border-color: var(--accent);
+    background: #181a20;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.icon-alergen {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15em;
+    color: #fff;
+    box-shadow: 0 0 0 2.5px #fff2 inset;
+    transition: transform 0.18s;
+    border: 2px solid #fff;
+}
+
+.agluten { background: #e09b4c; }
+.alacteos { background: #7d5b3d; }
+.ahuevos { background: #e2b96b; }
+.apescado { background: #224e9c; }
+.acrustaceos { background: #2ba7df; }
+.asoja { background: #2ea930; }
+.afrutos { background: #b65b4a; }
+.acacahuetes { background: #d58d3e; }
+.asulfitos { background: #b268b6;}
+
+.icon-label {
+    color: var(--muted);
+    font-size: 0.95em;
+    margin-left: 2px;
+    margin-right: 2px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    body {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 99vw;
+        padding: 18px 2vw 0 2vw;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo { font-size: 1.3rem; }
+    .section-title { font-size: 1.1rem; }
+    .menu-card { padding: 13px 8px 10px 8px; }
+    .item-header { gap: 6px; }
+    .item-name { font-size: 1em; }
+    .item-price { min-width: 48px; font-size: 1em; }
+    .item-desc { font-size: 0.93em; }
+}
+
+.footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+}

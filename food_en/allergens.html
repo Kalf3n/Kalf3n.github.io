@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Trovador | Allergens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --primary-bg: #181a20;
+      --secondary-bg: #23262f;
+      --accent: #f9c846;
+      --text: #f7f7f7;
+      --muted: #bfc3c9;
+      --radius: 22px;
+      --transition: 0.23s cubic-bezier(.4,0,.2,1);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-image: 
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212),
+        linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212);
+      background-size: 60px 60px;
+      background-position: 0 0, 30px 30px;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 10px 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .top-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent);
+      color: var(--primary-bg);
+      font-weight: 700;
+      font-size: 1.06rem;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 22px 10px 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 12px 0 #f9c84633;
+      outline: none;
+      transition: background var(--transition), color var(--transition), transform 0.18s;
+      text-decoration: none;
+      letter-spacing: 1.1px;
+      margin-bottom: 0;
+    }
+    .back-btn:hover, .back-btn:focus {
+      background: #fff;
+      color: var(--accent);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .back-btn svg {
+      width: 1.2em;
+      height: 1.2em;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      margin-right: 4px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 0.1em;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      text-align: center;
+    }
+    .section-title {
+      color: var(--text);
+      font-size: 1.5rem;
+      margin-bottom: 1.2em;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .info-block {
+      background: var(--secondary-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 16px 0 #0002;
+      color: var(--muted);
+      font-size: 1.01em;
+      padding: 22px 20px 18px 20px;
+      margin-bottom: 28px;
+      text-align: center;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+    .alergenos-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 24px;
+      margin: 0 auto 30px auto;
+      width: 100%;
+      max-width: 500px;
+    }
+    @media (max-width: 600px) {
+      .alergenos-list {
+        grid-template-columns: 1fr;
+        gap: 14px 0;
+      }
+      .container { max-width: 99vw; padding: 18px 2vw 0 2vw; }
+      .logo { font-size: 1.3rem; }
+      .section-title { font-size: 1.1rem; }
+      .back-btn { font-size: 0.98rem; padding: 8px 10px;}
+    }
+    .alergeno-card {
+      background: var(--secondary-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 18px 0 #0004;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 22px;
+      min-height: 62px;
+      border: 2.5px solid #282a34;
+      transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .alergeno-card:hover {
+      box-shadow: 0 8px 32px 0 #f9c84633;
+      border-color: var(--accent);
+      transform: translateY(-2px) scale(1.02);
+    }
+    .icon-alergen {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: #fff;
+      box-shadow: 0 0 0 2px #fff2 inset;
+      margin-right: 0;
+      flex-shrink: 0;
+      border: 2px solid #fff;
+    }
+    .agluten { background: #e09b4c; }
+    .acrustaceos { background: #2ba7df; }
+    .ahuevos { background: #e2b96b; }
+    .apescado { background: #224e9c; }
+    .acacahuetes { background: #d58d3e; }
+    .asoya { background: #47b96b; }
+    .alacteos { background: #7d5b3d; }
+    .afrutos { background: #b65b4a; }
+    .aapio { background: #7ed957; }
+    .amostaza { background: #e2c86b; }
+    .asesamo { background: #b1a16b; }
+    .asulfitos { background: #7d3a6b; }
+    .amoluscos { background: #7ed6e2; }
+    .aaltramuz { background: #f9e46b; }
+    .alergeno-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .alergeno-label {
+      color: var(--accent);
+      font-size: 1.08em;
+      font-weight: 700;
+      margin-bottom: 1px;
+    }
+    .alergeno-label-es {
+      color: var(--text);
+      font-size: 0.98em;
+      font-weight: 400;
+    }
+    .alergeno-desc {
+      color: var(--muted);
+      font-size: 0.95em;
+      margin-top: 2px;
+    }
+    .footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../menu-en.html" class="back-btn" title="Back to menu">
+        <svg viewBox="0 0 20 20"><polyline points="13 4 7 10 13 16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </a>
+    </div>
+    <div class="logo">El Trovador</div>
+    <div class="section-title">Allergens</div>
+    <div class="info-block">
+      At El Trovador, we care about your well-being and comply with the European regulation <b>1169/2011</b> on food information.<br>
+      Here you can check the main allergens present in our dishes.<br><br>
+      <b>If you have any allergy or intolerance, always consult our staff before placing your order.</b>
+      <br><br>
+      <span style="color:var(--accent);font-weight:600;">The safety of our customers is our priority.</span>
+    </div>
+    <div class="alergenos-list">
+      <div class="alergeno-card">
+        <span class="icon-alergen agluten">🌾</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Cereals with gluten</span>
+          <span class="alergeno-desc">Wheat, rye, barley, oats, spelt, kamut or their hybrid varieties.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen acrustaceos">🦀</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Crustaceans</span>
+          <span class="alergeno-desc">Shrimps, crabs, lobsters and derived products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen ahuevos">🥚</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Eggs</span>
+          <span class="alergeno-desc">Eggs and egg-based products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen apescado">🐟</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Fish</span>
+          <span class="alergeno-desc">Fish and derived products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen acacahuetes">🥜</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Peanuts</span>
+          <span class="alergeno-desc">Peanuts and peanut-based products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen asoya">🌱</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Soy</span>
+          <span class="alergeno-desc">Soy and soy-based products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen alacteos">🥛</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Dairy</span>
+          <span class="alergeno-desc">Milk and dairy products (including lactose).</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen afrutos">🌰</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Tree nuts</span>
+          <span class="alergeno-desc">Almonds, hazelnuts, walnuts, cashews, etc.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen aapio">🥬</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Celery</span>
+          <span class="alergeno-desc">Celery and derived products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen amostaza">🥄</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Mustard</span>
+          <span class="alergeno-desc">Mustard and derived products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen asesamo">🍘</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Sesame seeds</span>
+          <span class="alergeno-desc">Sesame and sesame-based products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen asulfitos">🧪</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Sulphites</span>
+          <span class="alergeno-desc">Sulphur dioxide and sulphites in concentrations above 10mg/kg or 10mg/l.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen amoluscos">🦪</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Molluscs</span>
+          <span class="alergeno-desc">Molluscs and derived products.</span>
+        </div>
+      </div>
+      <div class="alergeno-card">
+        <span class="icon-alergen aaltramuz">🥚</span>
+        <div class="alergeno-info">
+          <span class="alergeno-label">Lupin</span>
+          <span class="alergeno-desc">Lupin and lupin-based products.</span>
+        </div>
+      </div>
+    </div>
+    <div class="info-block" style="background:transparent;color:var(--text);font-size:0.98em;box-shadow:none;">
+      <b>Remember:</b> Although we take all possible precautions, there is a risk of cross-contamination.<br>
+      If you have any questions, please ask our staff.
+    </div>
+    <div class="footer">
+      &copy; 2025 El Trovador
+    </div>
+  </div>
+</body>
+</html>
