@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Trovador | Fish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css_style/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../../Menu-EN.html" class="back-btn" title="Back to menu">
+        <svg viewBox="0 0 20 20"><polyline points="13 4 7 10 13 16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </a>
+      <a href="../allergens.html" class="allergens-btn" title="View allergens">Allergens</a>
+    </div>
+    <div class="logo">El Trovador</div>
+    <div class="section-title">Fish</div>
+    <div class="menu-list">
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Galician-style octopus</div>
+          <div class="item-price">18,00 €</div>
+        </div>
+        <div class="item-desc">Tender octopus cooked Galician-style with paprika and olive oil. Served with boiled potatoes.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Mollusks">🦪</span>
+            <span class="icon-label">Mollusks</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/pulpo.jpg', 'Galician-style octopus')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled sea bass</div>
+          <div class="item-price">16,90 €</div>
+        </div>
+        <div class="item-desc">Fresh grilled sea bass with a touch of lemon. Served with vegetables.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/lubina.jpg', 'Grilled sea bass')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled salmon</div>
+          <div class="item-price">16,90 €</div>
+        </div>
+        <div class="item-desc">Fresh grilled salmon. Served with vegetables.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/salmon.jpg', 'Grilled salmon')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled cuttlefish</div>
+          <div class="item-price">13,90 €</div>
+        </div>
+        <div class="item-desc">Fresh grilled cuttlefish. Served with vegetables.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Mollusks">🦪</span>
+            <span class="icon-label">Mollusks</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/sepia.jpg', 'Grilled cuttlefish')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled squid</div>
+          <div class="item-price">market price</div>
+        </div>
+        <div class="item-desc">Fresh grilled squid with olive oil and green sauce. Served with vegetables.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Mollusks">🦪</span>
+            <span class="icon-label">Mollusks</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Grilled squid')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled prawns</div>
+          <div class="item-price">15,50 €</div>
+        </div>
+        <div class="item-desc">Fresh grilled prawns with sea salt.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen acrustaceos" title="Crustaceans">🦐</span>
+            <span class="icon-label">Crustaceans</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/gambas_plancha.jpg', 'Grilled prawns')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Fried anchovies</div>
+          <div class="item-price-options">
+            <div class="price-option">Half portion: 7,50 €</div>
+            <div class="price-option">Full portion: 13,00 €</div>
+          </div>
+        </div>
+        <div class="item-desc">Fresh anchovies battered and fried until golden.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/boquerones_fritos.jpg', 'Fried anchovies')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled sole</div>
+          <div class="item-price">16,90 €</div>
+        </div>
+        <div class="item-desc">Fresh grilled sole with extra virgin olive oil. Served with vegetables.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/lenguado.jpg', 'Grilled sole')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Roman-style hake</div>
+          <div class="item-price">13,90 €</div>
+        </div>
+        <div class="item-desc">Hake battered Roman-style, crispy on the outside and tender inside. Served with french fries.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Roman-style hake')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled sardines</div>
+          <div class="item-price-options">
+            <div class="price-option">Half portion: 7,50 €</div>
+            <div class="price-option">Full portion: 13,00 €</div>
+          </div>
+        </div>
+        <div class="item-desc">Fresh grilled sardines with olive oil and lemon.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/sardinas.jpg', 'Grilled sardines')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Fried fish platter</div>
+          <div class="item-price">15,90 €</div>
+        </div>
+        <div class="item-desc">Variety of small fried fish, typical Andalusian-style fried fish.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/fritura.jpg', 'Fried fish platter')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Mussels</div>
+          <div class="item-price">9,50 €</div>
+        </div>
+        <div class="item-desc">Fresh steamed mussels.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Mollusks">🦪</span>
+            <span class="icon-label">Mollusks</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Mussels')">view photo</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 El Trovador
+    </div>
+  </div>
+  <script src="../Jscript/script.js"></script>
+</body>
+</html>

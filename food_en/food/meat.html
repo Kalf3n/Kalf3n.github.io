@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Trovador | Meat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css_style/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../../Menu-EN.html" class="back-btn" title="Back to menu">
+        <svg viewBox="0 0 20 20"><polyline points="13 4 7 10 13 16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </a>
+      <a href="../allergens.html" class="allergens-btn" title="View allergens">Allergens</a>
+    </div>
+    <div class="logo">El Trovador</div>
+    <div class="section-title">Meat</div>
+    <div class="menu-list">
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Breaded chicken breast</div>
+          <div class="item-price">12,90 €</div>
+        </div>
+        <div class="item-desc">Breaded chicken breast, served with french fries and salad.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/pechuga-empanada.jpg', 'Breaded chicken breast')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled pork loin</div>
+          <div class="item-price">11,50 €</div>
+        </div>
+        <div class="item-desc">Grilled pork loin, served with french fries and salad.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/lomo_plancha.jpg', 'Grilled pork loin')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Grilled chicken breast</div>
+          <div class="item-price">11,90 €</div>
+        </div>
+        <div class="item-desc">Grilled chicken breast, served with french fries and salad.</div>
+        <div class="item-icons-block">
+          <!-- No allergens -->
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Grilled chicken breast')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Pork escalope</div>
+          <div class="item-price">11,90 €</div>
+        </div>
+        <div class="item-desc">Breaded pork fillet, served with french fries and salad.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Pork escalope')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Cordon blue</div>
+          <div class="item-price">15,90 €</div>
+        </div>
+        <div class="item-desc">Breaded fillet stuffed with ham and cheese, served with french fries and salad.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Cereals containing gluten">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Cordon blue')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Mixed plate</div>
+          <div class="item-price">11,90 €</div>
+        </div>
+        <div class="item-desc">Mixed plate: Pork loin or chicken, salad, fried egg, bacon, sausage and french fries.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Mixed plate')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Lamb chops, crispy potatoes and corn on the cob</div>
+          <div class="item-price">19,90 €</div>
+        </div>
+        <div class="item-desc">Lamb chops with crispy potatoes and corn on the cob.</div>
+        <div class="item-icons-block">
+          <!-- No allergens -->
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/chuletas.jpg', 'Lamb chops')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Entrecote steak with french fries, sweet potato and corn on the cob</div>
+          <div class="item-price">21,90 €</div>
+        </div>
+        <div class="item-desc">Entrecote steak served with french fries, sweet potato and corn on the cob.</div>
+        <div class="item-icons-block">
+          <!-- No allergens -->
+        </div>
+        <div class="item-desc" style="margin-top: 8px; font-size: 0.9em; color: var(--accent);">
+          Pepper sauce or mushroom sauce (+3,00 €)
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/entrecot.jpg', 'Ribeye steak')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Duck confit</div>
+          <div class="item-price">23,50 €</div>
+        </div>
+        <div class="item-desc">Duck leg confit, served with garnish.</div>
+        <div class="item-icons-block">
+          <!-- No allergens -->
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Duck confit')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Sirloin steak with french fries, sweet potato and corn on the cob</div>
+          <div class="item-price">24,90 €</div>
+        </div>
+        <div class="item-desc">Sirloin steak served with french fries, sweet potato and corn on the cob.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-desc" style="margin-top: 8px; font-size: 0.9em; color: var(--accent);">
+          Pepper sauce or mushroom sauce (+3,00 €)
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/solomillo.jpg', 'Sirloin steak')">view photo</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 El Trovador
+    </div>
+  </div>
+  <script src="../Jscript/script.js"></script>
+</body>
+</html>

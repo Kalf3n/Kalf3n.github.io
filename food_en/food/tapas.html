@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Trovador | Tapas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css_style/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <a href="../../Menu-EN.html" class="back-btn" title="Back to menu">
+        <svg viewBox="0 0 20 20"><polyline points="13 4 7 10 13 16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </a>
+      <a href="../allergens.html" class="allergens-btn" title="View allergens">Allergens</a>
+    </div>
+    <div class="logo">El Trovador</div>
+    <div class="section-title">Tapas</div>
+    <div class="menu-list">
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Meatballs</div>
+          <div class="item-price">5,90 €</div>
+        </div>
+        <div class="item-desc">Delicious homemade meatballs in tomato sauce.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/albondigas.jpg', 'Meatballs')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Anchovies in vinegar</div>
+          <div class="item-price">5,00 €</div>
+        </div>
+        <div class="item-desc">Fresh anchovies marinated in vinegar.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Anchovies in vinegar')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Roman-style squid rings</div>
+          <div class="item-price">9,90 €</div>
+        </div>
+        <div class="item-desc">Battered and fried squid rings, crispy on the outside.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Molluscs">🦪</span>
+            <span class="icon-label">Molluscs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Roman-style squid rings')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Russian salad</div>
+          <div class="item-price">5,50 €</div>
+        </div>
+        <div class="item-desc">Classic potato salad with tuna, carrot, peas, egg and mayonnaise.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asoja" title="Soy">🌱</span>
+            <span class="icon-label">Soy</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Lactose">🥛</span>
+            <span class="icon-label">Lactose</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/ensaladilla.jpg', 'Russian salad')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Croquettes</div>
+          <div class="item-price">5,50 €</div>
+        </div>
+        <div class="item-desc">Ham or chicken croquettes.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/croquetas.jpg', 'Croquettes')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Patatas bravas</div>
+          <div class="item-price">4,50 €</div>
+        </div>
+        <div class="item-desc">Fried potatoes with spicy brava sauce.</div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/bravas.jpg', 'Patatas bravas')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">French fries</div>
+          <div class="item-price">4,50 €</div>
+        </div>
+        <div class="item-desc">Golden and crispy french fries.</div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'French fries')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">French fries with cheese</div>
+          <div class="item-price">5,50 €</div>
+        </div>
+        <div class="item-desc">French fries topped with feta cheese.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/patatas_queso.jpg', 'French fries with cheese')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Baby squid</div>
+          <div class="item-price">10,00 €</div>
+        </div>
+        <div class="item-desc">Small fried squid, tender and flavorful.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen amoluscos" title="Molluscs">🦪</span>
+            <span class="icon-label">Molluscs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Baby squid')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Chicken wings</div>
+          <div class="item-price">5,00 €</div>
+        </div>
+        <div class="item-desc">Juicy chicken wings marinated with spices.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/alitas.jpg', 'Chicken wings')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Garlic prawns</div>
+          <div class="item-price">11,90 €</div>
+        </div>
+        <div class="item-desc">Fresh prawns sautéed with garlic and chili pepper.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen acrustaceos" title="Crustaceans">🦐</span>
+            <span class="icon-label">Crustaceans</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asulfitos" title="Sulfites">🧪</span>
+            <span class="icon-label">Sulfites</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/gambas_alajillo.jpg', 'Garlic prawns')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Fried cheese with jam</div>
+          <div class="item-price">8,50 €</div>
+        </div>
+        <div class="item-desc">Battered and fried cheese served with homemade jam.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen asoja" title="Soy">🌱</span>
+            <span class="icon-label">Soy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/queso.jpg', 'Fried cheese with jam')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Russian rolls</div>
+          <div class="item-price">7,50 €</div>
+        </div>
+        <div class="item-desc">York ham rolls filled with Russian salad.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen apescado" title="Fish">🐟</span>
+            <span class="icon-label">Fish</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/rollitos.jpg', 'Russian rolls')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Iberian ham and cheese</div>
+          <div class="item-price">15,90 €</div>
+        </div>
+        <div class="item-desc">Selection of quality Iberian ham and aged cheese.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Dairy">🥛</span>
+            <span class="icon-label">Dairy</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/jamon.jpg', 'Iberian ham and cheese')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Lean pork with tomato</div>
+          <div class="item-price">5,90 €</div>
+        </div>
+        <div class="item-desc">Lean pork stewed with natural tomato.</div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Lean pork with tomato')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Garlic chicken</div>
+          <div class="item-price">5,50 €</div>
+        </div>
+        <div class="item-desc">Chicken pieces sautéed with garlic and spices.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Garlic chicken')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Potato omelet</div>
+          <div class="item-price">4,50 €</div>
+        </div>
+        <div class="item-desc">Traditional Spanish omelet with potatoes and egg.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/tortilla_patata.jpg', 'Potato omelet')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Bread with aioli</div>
+          <div class="item-price">3,00 €</div>
+        </div>
+        <div class="item-desc">Toasted bread served with aioli.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Lactose">🥛</span>
+            <span class="icon-label">Lactose</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Bread with aioli')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Toasted bread with aioli</div>
+          <div class="item-price">4,00 €</div>
+        </div>
+        <div class="item-desc">Crispy toasted bread with aioli.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen ahuevos" title="Eggs">🥚</span>
+            <span class="icon-label">Eggs</span>
+          </div>
+          <div class="alergen-block">
+            <span class="icon-alergen alacteos" title="Lactose">🥛</span>
+            <span class="icon-label">Lactose</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/pan_tostado.jpg', 'Toasted bread with aioli')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Bread</div>
+          <div class="item-price">1,00 €</div>
+        </div>
+        <div class="item-desc">Fresh bread of the day.</div>
+        <div class="item-icons-block">
+          <div class="alergen-block">
+            <span class="icon-alergen agluten" title="Gluten-containing cereals">🌾</span>
+            <span class="icon-label">Gluten</span>
+          </div>
+        </div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/error.png', 'Bread')">view photo</button>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-header">
+          <div class="item-name">Tomato</div>
+          <div class="item-price">1,00 €</div>
+        </div>
+        <div class="item-desc">Natural grated tomato.</div>
+        <div class="item-bottom-row">
+          <button class="view-image-btn" onclick="viewFullImage('../../Fotos/tomate.jpg', 'Grated tomato')">view photo</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      &copy; 2025 El Trovador
+    </div>
+  </div>
+  <script src="../Jscript/script.js"></script>
+</body>
+</html>
